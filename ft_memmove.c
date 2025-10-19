@@ -14,13 +14,15 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*dest_p;
-	char	*src_p;
-	char	buffer[n];
+	unsigned char	*dest_p;
+	unsigned char	*src_p;
 
-	dest_p = (char *)dest;
-	src_p = (char *)src;
-	ft_memcpy(buffer, src_p, n);
-	ft_memcpy(dest_p, buffer, n);
+	dest_p = (unsigned char *)dest + n - 1;
+	src_p = (unsigned char *)src + n - 1;
+	if (dest > src && (src + n) >= dest)
+		while (n--)
+			*dest_p-- = *src_p--;
+	else
+		ft_memcpy(dest, src, n);
 	return (dest);
 }
