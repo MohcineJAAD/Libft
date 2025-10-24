@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (size && ((size_t)-1) / size)
+	if (size && size > ((size_t)-1) / nmemb)
 		return (NULL);
 	ptr = malloc(size * nmemb);
 	if (!ptr)
@@ -24,3 +24,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
+
+// the condition is       ==> 	size * nbelem < size_max
+// so we will found       ==> 	size >  size_max / nbelem 
+// or 			       ==> 		nbelem >  size_max / size 			
