@@ -32,7 +32,7 @@ size_t	ft_countword(char const *s, char c)
 	return (counter);
 }
 
-void	*ft_free_previus(void **base_address, void **increment_address)
+void	*ft_free_previus(char **base_address, char **increment_address)
 {
 	int	i;
 
@@ -46,11 +46,24 @@ void	*ft_free_previus(void **base_address, void **increment_address)
 	return (NULL);
 }
 
+size_t	ft_wordlen(const char *w, char c)
+{
+	size_t	len;
+
+	len = 0;
+	while (*w && *w != c)
+	{
+		len++;
+		w++;
+	}
+	return (len);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char		**table;
 	char		**base_address;
-	char const	*start;
+	size_t		len;
 
 	if (!s)
 		return (0);
@@ -64,10 +77,9 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (!(*s))
 			break ;
-		start = s;
-		while (*s && *s != c)
-			s++;
-		*table = ft_substr(start, 0, (s - start));
+		len = ft_wordlen(s, c);
+		*table = ft_substr(s, 0, len);
+		s += len;
 		if (!(*table))
 			return (ft_free_previus(base_address, table));
 		table++;
