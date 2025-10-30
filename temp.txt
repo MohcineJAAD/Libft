@@ -1,0 +1,49 @@
+int main()
+{
+	char *src = " khiar";
+	char *dst = "walid";
+	printf(" size = %d\n dst = %s\n", strlcat(dst, src, strlen(src) + strlen(dst)), dst);
+}
+
+#################################################################
+
+// char	**ft_split(char const *s, char c)
+// {
+// 	unsigned int	words;
+// 	unsigned int	start;
+// 	char			**ret;
+// 	char			**orgret;
+// 	char			*org;
+// 	char			*sub;
+// 	size_t			end;
+
+// 	s = ft_strtrim(s, &c);
+// 	org = (char *)s;
+// 	start = 0;
+// 	end = 0;
+// 	words = ft_countword(s, c);
+// 	ret = (char **)malloc(sizeof(char *) * (words + 1));
+// 	orgret = ret;
+// 	while (words--)
+// 	{
+// 		while (*org && *org != c)
+// 		{
+// 			end++;
+// 			org++;
+// 		}
+// 		sub = ft_substr(s, start, end);
+// 		*ret = sub;
+// 		ret++;
+// 		while (*org == c)
+// 		{
+// 			end++;
+// 			org++;
+// 		}
+// 		start += end;
+// 		end = 0;
+// 	}
+// 	*ret = NULL;
+// 	return (orgret);
+// }
+
+
