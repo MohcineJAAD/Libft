@@ -22,9 +22,11 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(BONUS_OBJS)
+	ar rcs $(NAME) $(BONUS_OBJS)
 
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
