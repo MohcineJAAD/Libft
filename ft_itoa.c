@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_nbrlen(int n)
+static size_t	ft_nbrlen(int n)
 {
 	size_t	counter;
 
@@ -27,7 +27,7 @@ size_t	ft_nbrlen(int n)
 	return (counter);
 }
 
-void	ft_fill(char *str, long n, size_t len)
+static void	ft_fill(char *str, long n, size_t len)
 {
 	int	sign;
 

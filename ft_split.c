@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_countword(char const *s, char c)
+static size_t	ft_countword(char const *s, char c)
 {
 	size_t	counter;
 	int		flag;
@@ -32,7 +32,7 @@ size_t	ft_countword(char const *s, char c)
 	return (counter);
 }
 
-void	*ft_free_previus(char **base_address, char **increment_address)
+static void	*ft_free_previus(char **base_address, char **increment_address)
 {
 	int	i;
 
@@ -46,7 +46,7 @@ void	*ft_free_previus(char **base_address, char **increment_address)
 	return (NULL);
 }
 
-size_t	ft_wordlen(const char *w, char c)
+static size_t	ft_wordlen(const char *w, char c)
 {
 	size_t	len;
 
