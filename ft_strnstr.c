@@ -6,7 +6,7 @@
 /*   By: mjaad <mjaad@student.1337.ma>              #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025-10-20 14:23:37 by mjaad             #+#    #+#             */
-/*   Updated: 2025-10-20 14:23:37 by mjaad            ###   ########.fr       */
+/*   Updated: 2025/11/03 18:57:40 by mjaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		big++;
 		len--;
 	}
-	return (0);
+	return (NULL);
 }

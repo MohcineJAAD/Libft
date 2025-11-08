@@ -6,7 +6,7 @@
 /*   By: mjaad <mjaad@student.1337.ma>              #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025-10-21 14:15:42 by mjaad             #+#    #+#             */
-/*   Updated: 2025-10-21 14:15:42 by mjaad            ###   ########.fr       */
+/*   Updated: 2025/11/03 19:10:53 by mjaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*location;
 	char	*origin;
 
+	if (!s)
+		return (NULL);
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	if (start >= ft_strlen(s))

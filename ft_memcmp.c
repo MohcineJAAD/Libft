@@ -6,7 +6,7 @@
 /*   By: mjaad <mjaad@student.1337.ma>              #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025-10-20 13:28:07 by mjaad             #+#    #+#             */
-/*   Updated: 2025-10-20 13:28:07 by mjaad            ###   ########.fr       */
+/*   Updated: 2025/11/03 18:45:30 by mjaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	const unsigned char	*ptr1;
 	const unsigned char	*ptr2;
 
+	if (!s1 && !s2)
+		return (0);
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
 	while (n--)
