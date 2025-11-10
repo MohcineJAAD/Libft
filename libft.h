@@ -6,26 +6,24 @@
 /*   By: mjaad <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:17:18 by mjaad             #+#    #+#             */
-/*   Updated: 2025/10/15 12:19:53 by mjaad            ###   ########.fr       */
+/*   Updated: 2025/11/10 09:49:46 by mjaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
 # include <unistd.h>
+# include <stddef.h>
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
-# include <stdbool.h>
-# include <limits.h>
 # include <ctype.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}					t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -70,4 +68,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
 #endif

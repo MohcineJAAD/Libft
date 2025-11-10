@@ -16,7 +16,7 @@ static void	*ft_free_previus(t_list **base_address, void *content, \
 void (*del)(void *))
 {
 	del(content);
-	ft_lstclear(&base_address, del);
+	ft_lstclear(base_address, del);
 	return (NULL);
 }
 
